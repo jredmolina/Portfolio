@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-import Slider from "react-slick";
 import "./index.css";
 import "./App.css";
 import Hero from "./components/Hero";
@@ -8,7 +7,6 @@ import Works from "./components/Works";
 import Contact from "./components/Contact";
 import styled from "styled-components";
 import Navbar from "./components/NavBar";
-import { SideNav } from "./components/SideNav";
 import { useTypeWriter, Cursor } from "react-simple-typewriter";
 
 const Container = styled.div`
@@ -41,7 +39,6 @@ function App() {
   };
   return (
     <Container>
-      <SideNav scrollToComponent={scrollToComponent} />
       <div ref={targetRefs.Hero} id="Hero">
         <Hero />
       </div>

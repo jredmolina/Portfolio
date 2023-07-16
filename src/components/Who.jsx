@@ -15,7 +15,7 @@ const Who = () => {
       id="Who"
       className="h-[100vh] snap-center flex flex-col items-center justify-between max-sm:h-[100%] mb-[500px] max-sm:mb-[100px]"
     >
-      <div className="h-[100vh] snap-center w-[1300px] flex gap-[150px] max-sm:flex-col max-sm:w-[100%] ">
+      <div className="h-[100vh] snap-center w-[90%] flex gap-[75px] max-sm:flex-col max-sm:w-[100%] ">
         {/* Left Side */}
         <motion.div
           whileInView={{ x: 0 }}
@@ -34,22 +34,22 @@ const Who = () => {
         <motion.div
           whileInView={{ x: 0 }}
           initial={{ x: 300 }}
-          className="flex-[1] flex flex-col gap-[10px] justify-center max-sm:w-[100%] max-sm:h-[100%] max-sm:items-center max-sm:p-10"
+          className="w-[70%] flex flex-col gap-[10px] justify-center max-sm:w-[100%] max-sm:h-[100%] max-sm:items-center max-sm:p-10"
         >
-          <h1 className="text-[60px] max-sm:text-[40px]">Who Am I</h1>
+          <h1 className="text-[40px] max-sm:text-[40px]">Who Am I</h1>
           <div className="flex items-center gap-[30px]">
             <img className="h-[5px]" src="./img/line.png"></img>
           </div>
-          <p className="max-sm:text-center max-sm:text-[13px]">
+          <p className="text-[15px] max-sm:text-center max-sm:text-[13px]">
             Hello, my name is Jared Molina.
           </p>
-          <p className="max-sm:text-center max-sm:text-[13px]">
+          <p className="text-[15px] max-sm:text-center max-sm:text-[13px]">
             I am a front-end developer based in the Southern California, Los
             Angeles area. I recently graduated summa cum laude in May 2023 from
             the California Polytechnic University, Pomona with my Bachelor’s
             Degree in Science, majoring in Computer Science.
           </p>
-          <p className="max-sm:text-center max-sm:text-[13px]">
+          <p className="text-[15px] max-sm:text-center max-sm:text-[13px]">
             I am pursuing my passion in front-end development and software
             engineering and I am currently working as a website development
             intern for the Cal Poly Pomona PolySec Cyber Lab, a highly regarded
@@ -58,11 +58,11 @@ const Who = () => {
             cybersecurity related focuses such as self-driving cars and drone
             defense.
           </p>
-          <p className="max-sm:text-center max-sm:text-[13px]">
+          <p className="text-[15px] max-sm:text-center max-sm:text-[13px]">
             When I am not at my computer, I have a number of hobbies including
             watching and analyzing films, tufting rugs, and collecting sneakers.
           </p>
-          <p className="max-sm:text-center max-sm:text-[13px]">
+          <p className="text-[15px] max-sm:text-center max-sm:text-[13px]">
             {" "}
             Please don't hesitate to reach out to me!
           </p>

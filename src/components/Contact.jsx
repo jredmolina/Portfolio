@@ -29,14 +29,14 @@ const Contact = () => {
   return (
     <div
       id="Contact"
-      className="h-[100vh] ml-[200px] snap-center flex flex-col items-center justify-between mb-[100px] max-sm:p-10 max-sm:ml-[0px]"
+      className="h-[100vh]  snap-center flex flex-col items-center justify-between mb-[100px] max-sm:p-10 max-sm:ml-[0px]"
     >
-      <div className="h-[100vh] snap-center w-[1400px] flex justify-between gap-[50px] max-sm:flex-col max-sm:w-[100%] max-sm:gap-[20px] ">
+      <div className="h-[100vh] snap-center w-[90%] flex justify-between gap-[50px] max-sm:flex-col max-sm:w-[100%] max-sm:gap-[20px] ">
         {/* Left Side */}
         <motion.div
           whileInView={{ x: 0 }}
           initial={{ x: -300 }}
-          className="flex-[1] flex flex-col items-start gap-[3px] justify-center "
+          className="flex-[50%] flex flex-col items-start gap-[3px] justify-center "
         >
           <h1 className="text-[50px] max-sm:text-center max-sm:text-[30px]">
             Interested in working together? Send me a message!
@@ -51,7 +51,7 @@ const Contact = () => {
         <motion.div
           whileInView={{ x: 0 }}
           initial={{ x: 300 }}
-          className="flex-[1] flex flex-col gap-[10px] justify-center max-sm:items-center "
+          className="flex-[50%]  flex flex-col gap-[10px] justify-center max-sm:items-center "
         >
           <form
             className="w-[550px] flex flex-col gap-[25px] max-sm:w-[100%] max-sm:gap-3"
@@ -62,17 +62,17 @@ const Contact = () => {
               Contact
             </h1>
             <input
-              className="p-[20px] bg-slate-100 border-none rounded-[5px] text-black max-sm:h-[15px]"
+              className="p-[15px] bg-slate-100 border-none rounded-[5px] text-black max-sm:h-[15px]"
               placeholder="Name"
               name="name"
             />
             <input
-              className="p-[20px]  bg-slate-100 border-none rounded-[5px] text-black max-sm:h-[15px]"
+              className="p-[15px]  bg-slate-100 border-none rounded-[5px] text-black max-sm:h-[15px]"
               placeholder="Email"
               name="email"
             />
             <textarea
-              className="p-[20px]  bg-slate-100 border-none rounded-[5px] text-black "
+              className="p-[15px]  bg-slate-100 border-none rounded-[5px] text-black "
               rows={10}
               placeholder="Write your message"
               name="message"

@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const NavBar = () => {
   return (
-    <div className="relative mt-[20px] mb-[50px] top-[0]  w-[100%] z-[10000] flex justify-center  max-sm:w-[100%] max-sm:mb-[10px] max-sm:items-center max-sm:justify-around">
-      <div className="w-[1350px] px-[0px] text-white">
+    <div className="relative mt-[10px] mb-[10px] top-[0] px-8 w-[100%] z-[10000] flex justify-center  max-sm:w-[100%] max-sm:mb-[10px] max-sm:items-center max-sm:justify-around">
+      <div className="w-[90%] px-[0px] text-white">
         <div className="flex items-center justify-between  max-sm:justify-center ">
           <motion.img
             animate={{ x: 0 }}

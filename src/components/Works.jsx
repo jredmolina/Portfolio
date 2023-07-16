@@ -151,9 +151,9 @@ const Works = () => {
   return (
     <div
       id="Works"
-      className="h-[100vh] snap-center flex flex-col items-center justify-between max-sm:h-[100%] mb-[500px] max-sm:mb-[100px]"
+      className="h-[100vh] snap-start flex flex-col items-center justify-between max-sm:h-[100%] mb-[500px] max-sm:mb-[100px]"
     >
-      <div className="h-[100vh] snap-center w-[1400px] flex  flex-col items-center justify-center gap-6 max-sm:w-[100%]">
+      <div className="h-[100vh] snap-start w-[90%] flex  flex-col items-center justify-center gap-6 max-sm:w-[100%]">
         <h1 className="text-[60px] max-sm:text-[40px]">Projects</h1>
         <img className="h-[5px]" src="./img/line.png"></img>
 
