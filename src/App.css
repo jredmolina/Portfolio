@@ -4,6 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@supports (-webkit-appearance: none) {
+  h1 {
+    list-style: none;
+    -webkit-appearance: none;
+  }
+}
+
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
