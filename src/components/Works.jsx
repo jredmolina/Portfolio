@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { useState } from "react";
 import SyncSchedule from "../assets/SyncSchedule.png";
 import SplitTheBill from "../assets/SplitTheBill.png";
@@ -52,7 +52,7 @@ const projects = {
     mobile: true,
   },
 };
-const Works = () => {
+const Works = forwardRef((props, ref) => {
   const toolsTile = (projectIndex) => {
     const toolsArray = projects[projectIndex].tools;
     const tools = toolsArray.map((tool, index) => (
@@ -151,10 +151,11 @@ const Works = () => {
   return (
     <div
       id="Works"
-      className="h-[100vh] snap-start flex flex-col items-center justify-between max-sm:h-[100%] mb-[500px] max-sm:mb-[100px]"
+      className="h-[100vh] snap-start flex flex-col items-center justify-between max-lg:h-[100%] mb-[500px] max-lg:mb-[400px]"
+      ref={ref}
     >
-      <div className="h-[100vh] snap-start w-[90%] flex  flex-col items-center justify-center gap-6 max-sm:w-[100%]">
-        <h1 className="text-[60px] max-sm:text-[40px]">Projects</h1>
+      <div className="h-[100vh] snap-start w-[90%] flex  flex-col items-center justify-center gap-6 max-lg:w-[100%] max-lg:gap-3">
+        <h1 className="text-[60px] max-lg:text-[30px]">Projects</h1>
         <img className="h-[5px]" src="./img/line.png"></img>
 
         {/* Grid */}
@@ -174,7 +175,7 @@ const Works = () => {
                 : open("splitTheBill")
             }
           >
-            <h1 className=" text-[30px] m-2 font-semibold max-sm:text-[20px]">
+            <h1 className=" text-[30px] m-2 font-semibold max-lg:text-[20px]">
               Split the Bill
             </h1>
             <img className="h-[87%]" src={SplitTheBill}></img>
@@ -190,10 +191,10 @@ const Works = () => {
                 : open("syncSchedule")
             }
           >
-            <h1 className=" text-[30px] m-2 font-semibold max-sm:text-[20px]">
+            <h1 className="h-[10%] text-[30px] m-2 font-semibold max-lg:text-[20px]">
               SyncSchedule
             </h1>
-            <img src={SyncSchedule}></img>
+            <img className="h-[90%] object-contain" src={SyncSchedule}></img>
           </motion.div>
 
           {/* PhotoGallery Tall Card */}
@@ -206,7 +207,7 @@ const Works = () => {
                 : open("photoGallery")
             }
           >
-            <h1 className=" text-[30px] m-2 font-semibold max-sm:text-[20px]">
+            <h1 className=" text-[30px] m-2 font-semibold max-lg:text-[20px]">
               Photo Gallery
             </h1>
             <img className="h-[87%]" src={PhotoGallery}></img>
@@ -220,10 +221,10 @@ const Works = () => {
               modalOpen.polySec ? close("polySec") : open("polySec")
             }
           >
-            <h1 className=" text-[30px] m-2 font-semibold max-sm:text-[20px]">
+            <h1 className=" h-[10%] text-[30px] m-2 font-semibold max-lg:text-[20px]">
               PolySec
             </h1>
-            <img src={PolySec}></img>
+            <img className="h-[90%] object-contain" src={PolySec}></img>
           </motion.div>
         </motion.div>
       </div>
@@ -275,6 +276,6 @@ const Works = () => {
       </AnimatePresence>
     </div>
   );
-};
+});
 
 export default Works;

@@ -19,38 +19,28 @@ const Container = styled.div`
     display: none;
   }
   background: url("./img/GrainyBg.png");
+  background-size: cover;
+  background-position: center center;
   z-index: -1;
   display: flex;
   flex-direction: column;
 `;
 
 function App() {
-  const targetRefs = {
-    Hero: useRef(null),
-    Who: useRef(null),
-    Works: useRef(null),
-    Contact: useRef(null),
-  };
+  const heroRef = useRef(null);
+  const whoRef = useRef(null);
+  const worksRef = useRef(null);
+  const contactRef = useRef(null);
 
-  const scrollToComponent = (component) => {
-    if (targetRefs[component].current) {
-      targetRefs[component].current.scrollIntoView({ behavior: "smooth" });
-    }
+  const scrollToComponent = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <Container>
-      <div ref={targetRefs.Hero} id="Hero">
-        <Hero />
-      </div>
-      <div ref={targetRefs.Who} id="Who">
-        <Who />
-      </div>
-      <div ref={targetRefs.Works} id="Works">
-        <Works id="Works" />
-      </div>
-      <div ref={targetRefs.Contact} id="Contact">
-        <Contact id="Contact" />
-      </div>
+      <Hero ref={heroRef} />
+      <Who ref={whoRef} />
+      <Works ref={worksRef} />
+      <Contact ref={contactRef} />
     </Container>
   );
 }

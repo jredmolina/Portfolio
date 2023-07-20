@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Backdrop } from "./Backdrop";
+import close from "../assets/close.png";
 
 import React from "react";
 
@@ -28,14 +29,14 @@ export const Modal = ({ handleClose, projectData }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="modal m-auto py-4 px-8 rounded-[12px] flex flex-col items-end bg-white text-black "
+        className="modal m-auto py-4 px-8 rounded-[12px] flex flex-col items-center justify-center bg-white text-black "
         variants={dropIn}
         initial="hidden"
         animate="visible"
         exit="exit"
       >
         <div className="w-full  h-[90%] flex justify-center ">
-          <div className="w-[50%] h-[100%] flex items-center justify-center max-sm:hidden">
+          <div className="w-[50%] h-[100%] flex items-center justify-center  max-lg:hidden">
             <img
               className={` ${
                 projectData.mobile ? "h-full w-auto" : "w-auto h-auto"
@@ -43,7 +44,7 @@ export const Modal = ({ handleClose, projectData }) => {
               src={projectData.image}
             />
           </div>
-          <div className="w-[50%] max-sm:w-full">
+          <div className="w-[50%] max-lg:w-full">
             <h1 className="font-bold text-[30px] mb-[0px] ">
               {projectData.name}
             </h1>
@@ -55,14 +56,14 @@ export const Modal = ({ handleClose, projectData }) => {
             <div className="mt-[20px] flex gap-5 w-full">
               {projectData.github && (
                 <a href={projectData.github} target="_blank">
-                  <button className="rounded-lg w-[150px]  max-sm:w-[120px]">
+                  <button className="rounded-lg w-[150px]  max-lg:w-[120px]">
                     GitHub
                   </button>
                 </a>
               )}
               {projectData.live && (
                 <a href={projectData.live} target="_blank">
-                  <button className="rounded-lg w-[150px] max-sm:w-[120px]">
+                  <button className="rounded-lg w-[150px] max-lg:w-[120px]">
                     Live Site
                   </button>
                 </a>
@@ -70,9 +71,11 @@ export const Modal = ({ handleClose, projectData }) => {
             </div>
           </div>
         </div>
-        <button className="rounded-lg w-[150px]" onClick={handleClose}>
-          Close
-        </button>
+        <img
+          src={close}
+          className="fixed right-0 top-0 w-[50px] cursor-pointer"
+          onClick={handleClose}
+        />
       </motion.div>
     </Backdrop>
   );
