@@ -24,7 +24,7 @@ const Hero = forwardRef((props, ref) => {
         {/* Text and buttons */}
         <div className="sticky z-20 flex flex-col gap-[20px] w-[1300px] mb-[-400px]  justify-center items-center max-lg:items-center max-lg:m-[0px] ">
           <div>
-            <h1 className="list-none">Hi my nam is jared</h1>
+            <p className="list-none">Hi my nam is jared</p>
           </div>
 
           <div className="flex items-center gap-[10px]">
