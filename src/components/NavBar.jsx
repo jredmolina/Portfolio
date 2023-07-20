@@ -48,9 +48,9 @@ const NavBar = () => {
               </button>
             </motion.li>
           </motion.ul>
-          <div className="lg:hidden w-[50px]">
+          {/* <div className="lg:hidden w-[50px]">
             <img src="./img/threebars.png" onClick={() => setOpen(!open)} />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
