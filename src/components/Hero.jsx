@@ -27,7 +27,9 @@ const Hero = forwardRef((props, ref) => {
             whileInView={{ scale: 1 }}
             initial={{ scale: 0 }}
             className="text-[100px] max-lg:text-[40px] leading-none"
-          ></motion.h1>
+          >
+            Hi, I'm <strong>Jared</strong>
+          </motion.h1>
           <div className="flex items-center gap-[10px]">
             <img className="h-[5px]" src="./img/line.png"></img>
           </div>
