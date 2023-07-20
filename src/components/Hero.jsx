@@ -26,7 +26,7 @@ const Hero = forwardRef((props, ref) => {
           <motion.h1
             whileInView={{ scale: 1 }}
             initial={{ scale: 0 }}
-            className="text-[100px] max-lg:text-[40px] leading-none"
+            className="text-[100px] max-lg:text-[40px] leading-none list-none"
           >
             Hi, I'm <strong>Jared</strong>
           </motion.h1>
