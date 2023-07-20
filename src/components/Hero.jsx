@@ -13,7 +13,7 @@ const Hero = forwardRef((props, ref) => {
   });
 
   return (
-    <section
+    <div
       id="Hero"
       className="h-[100vh] pt-[200px] snap-end flex flex-col items-center justify-between gap-6 mb-[500px]
     max-lg:w-[100%] max-lg:mb-[400px]"
@@ -50,7 +50,7 @@ const Hero = forwardRef((props, ref) => {
           </Canvas>
         </div>
       </div>
-    </section>
+    </div>
   );
 });
 
