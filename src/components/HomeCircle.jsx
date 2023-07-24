@@ -17,8 +17,8 @@ export const HomeCircle = () => {
   gl.physicallyCorrectLights = true;
   const circleTexture = useLoader(TextureLoader, "./img/HomeTransparent.png");
   return (
-    <group position={[0, -4, -12]}>
-      <Circle args={[1, 64]} scale={[12.5, 12.5, 2]}>
+    <group position={[0, 0, -12]}>
+      <Circle args={[1, 64]} scale={[10, 10, 2]}>
         <MeshDistortMaterial
           distort={0.4}
           speed={2}
@@ -30,7 +30,7 @@ export const HomeCircle = () => {
           renderOrder={2}
         />
       </Circle>
-      <Sphere args={[1, 64, 64]} scale={[11, 11, 10]}>
+      <Sphere args={[1, 64, 64]} scale={[10, 10, 5]}>
         <MeshDistortMaterial
           distort={0.4}
           speed={2}

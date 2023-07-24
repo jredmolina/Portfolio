@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./index.css";
 import "./App.css";
 import Hero from "./components/Hero";
@@ -32,12 +32,15 @@ function App() {
   const worksRef = useRef(null);
   const contactRef = useRef(null);
 
-  const scrollToComponent = () => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
-  };
   return (
     <Container>
-      <Hero ref={heroRef} />
+      <Navbar
+        heroRef={heroRef}
+        whoRef={whoRef}
+        worksRef={worksRef}
+        contactRef={contactRef}
+      ></Navbar>
+      <Hero ref={heroRef} nextRef={whoRef} />
       <Who ref={whoRef} />
       <Works ref={worksRef} />
       <Contact ref={contactRef} />

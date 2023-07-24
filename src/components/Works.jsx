@@ -109,7 +109,6 @@ const Works = forwardRef((props, ref) => {
       ...prevState,
       [projectName]: false,
     }));
-    console.log("hello");
   };
 
   const open = (projectName) => {
@@ -117,7 +116,6 @@ const Works = forwardRef((props, ref) => {
       ...prevState,
       [projectName]: true,
     }));
-    console.log("hello1");
   };
 
   const container = {
