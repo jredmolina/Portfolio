@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 const Contact = forwardRef((props, ref) => {
+  const formRef = useRef(null);
   const [success, setSuccess] = useState(null);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -11,7 +12,7 @@ const Contact = forwardRef((props, ref) => {
       .sendForm(
         "service_yf77v0f",
         "template_mjaciy8",
-        ref.current,
+        formRef.current,
         "d7D5_d0f0UEO16kJ6"
       )
       .then(
@@ -51,12 +52,12 @@ const Contact = forwardRef((props, ref) => {
         <motion.div
           whileInView={{ x: 0 }}
           initial={{ x: 300 }}
-          className="flex-[50%]  flex flex-col gap-[10px] justify-center  items-center max-lg:items-center max-lg:gap-[5px] "
+          className="flex-[50%]  flex flex-col gap-[5px] justify-center  items-center max-lg:items-center max-lg:gap-[5px] "
         >
           <form
             className="w-[550px] flex flex-col gap-[10px] max-lg:w-[100%] max-lg:gap-2"
             onSubmit={handleSubmit}
-            ref={ref}
+            ref={formRef}
           >
             <h1 className="text-[30px]  mb-[0] text-white max-lg:text-center">
               Contact
