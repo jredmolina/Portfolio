@@ -19,11 +19,11 @@ const Hero = forwardRef(({ nextRef }, ref) => {
   return (
     <div
       id="Hero"
-      className="h-[100vh] pt-[150px] mb-[500px] flex flex-col items-center justify-center gap-2 snap-center max-sm:pt-[75px]"
+      className="h-[100vh] pt-[120px] mb-[500px] flex flex-col items-center justify-center gap-2 snap-center max-sm:py-[50px]"
       ref={ref}
     >
       {/* Three JS */}
-      <div className="w-[500px] h-[500px] max-lg:">
+      <div className="w-[500px] h-[500px] ">
         <Canvas>
           <OrbitControls enableZoom={false} enableRotate={false} />
           <ambientLight intensity={3} />

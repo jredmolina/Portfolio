@@ -13,7 +13,7 @@ const Who = forwardRef((props, ref) => {
   return (
     <div
       id="Who"
-      className="h-[100vh] snap-center flex flex-col items-center justify-between max-lg:h-[100%] mb-[500px] max-lg:mb-[400px]"
+      className="h-[100vh] snap-center flex flex-col items-center justify-between mb-[500px] pt-10 max-lg:h-[100%]  max-lg:mb-[400px] max-sm:py-[50px]"
       ref={ref}
     >
       <div className="h-[100vh] snap-center w-[90%] flex gap-[75px] max-lg:flex-col max-lg:w-[100%] ">

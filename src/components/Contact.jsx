@@ -29,15 +29,15 @@ const Contact = forwardRef((props, ref) => {
   return (
     <div
       id="Contact"
-      className="h-[100vh]  snap-center flex flex-col items-center justify-between mb-[100px] max-lg:p-10 max-lg:ml-[0px] "
+      className="h-[100vh]  snap-center flex flex-col items-center justify-between mb-[100px] max-lg:p-10 max-lg:ml-[0px] max-sm:py-[50px] "
       ref={ref}
     >
-      <div className="h-[100vh] snap-center w-[70%] flex justify-between gap-[50px] max-sm:flex-col max-lg:w-[100%] max-lg:gap-[10px] ">
+      <div className="h-[100vh] snap-center w-[70%] flex justify-center gap-[10px] max-sm:flex-col max-lg:w-[100%] max-lg:gap-[30px] ">
         {/* Left Side */}
         <motion.div
           whileInView={{ x: 0 }}
           initial={{ x: -300 }}
-          className="flex-[50%] flex flex-col items-start gap-[3px] justify-center max-lg:items-center "
+          className="flex flex-col items-start gap-[3px] justify-center max-lg:items-center "
         >
           <h1 className="text-[50px]  max-lg:text-center max-lg:text-[30px] ">
             Interested in working together? Send me a message!
@@ -52,7 +52,7 @@ const Contact = forwardRef((props, ref) => {
         <motion.div
           whileInView={{ x: 0 }}
           initial={{ x: 300 }}
-          className="flex-[50%]  flex flex-col gap-[5px] justify-center  items-center max-lg:items-center max-lg:gap-[5px] "
+          className="flex flex-col gap-[10px] justify-center  items-center max-lg:items-center max-lg:gap-[5px] "
         >
           <form
             className="w-[550px] flex flex-col gap-[10px] max-lg:w-[100%] max-lg:gap-2"

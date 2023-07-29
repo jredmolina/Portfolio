@@ -34,7 +34,7 @@ const NavBar = ({ heroRef, whoRef, worksRef, contactRef }) => {
   };
   return (
     <div>
-      <div className="fixed mt-[10px] top-[0]  w-[100%] z-[10000] px-2 flex justify-between items-center">
+      <div className="fixed mt-[10px] top-[0]  w-[100%] z-[10000] px-2 flex justify-between items-center ">
         {/* Logo  */}
         <motion.img
           animate={{ x: 0 }}
@@ -44,7 +44,7 @@ const NavBar = ({ heroRef, whoRef, worksRef, contactRef }) => {
         />
 
         {/* Nav Bar Links */}
-        <motion.ul className="flex gap-10 text-[25px] max-md:hidden">
+        <motion.ul className="flex gap-10 text-[25px] max-lg:hidden">
           <motion.li
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
