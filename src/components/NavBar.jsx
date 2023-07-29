@@ -34,7 +34,7 @@ const NavBar = ({ heroRef, whoRef, worksRef, contactRef }) => {
   };
   return (
     <div>
-      <div className="fixed mt-[10px] top-[0] px-8 w-[100%] z-[10000] flex justify-between items-center">
+      <div className="fixed mt-[10px] top-[0]  w-[100%] z-[10000] flex justify-between items-center">
         {/* Logo  */}
         <motion.img
           animate={{ x: 0 }}
@@ -131,7 +131,11 @@ const NavBar = ({ heroRef, whoRef, worksRef, contactRef }) => {
             animate="visible"
             exit="exit"
           >
-            <img className="w-[50px] " src={close} onClick={closeMenu}></img>
+            <img
+              className="w-[50px] mt-[15px] "
+              src={close}
+              onClick={closeMenu}
+            ></img>
             <ul className="text-[25px] mt-10 text-right">
               <li
                 className="cursor-pointer mb-2"
