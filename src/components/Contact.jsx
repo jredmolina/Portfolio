@@ -29,10 +29,10 @@ const Contact = forwardRef((props, ref) => {
   return (
     <div
       id="Contact"
-      className="h-[100vh]  snap-center flex flex-col items-center justify-between mb-[100px] max-lg:p-10 max-lg:ml-[0px] max-sm:py-[50px] "
+      className="  flex flex-col items-center justify-between  mb-[150px] max-lg:p-10 max-lg:ml-[0px] max-sm:py-[50px] lg:snap-center "
       ref={ref}
     >
-      <div className="h-[100vh] snap-center w-[70%] flex justify-center gap-[10px] max-sm:flex-col max-lg:w-[100%] max-lg:gap-[30px] ">
+      <div className="  w-[70%] flex justify-center gap-[10px] max-sm:flex-col max-lg:w-[100%] max-lg:gap-[30px] ">
         {/* Left Side */}
         <motion.div
           whileInView={{ x: 0 }}
@@ -44,7 +44,7 @@ const Contact = forwardRef((props, ref) => {
           </h1>
           <div className="flex justify-center items-center gap-[15px]">
             <img src={email} className="w-[40px]" />
-            <h2>jared.a.molina01@gmail.com</h2>
+            <h2>jared@jaredmolina.com</h2>
           </div>
         </motion.div>
 

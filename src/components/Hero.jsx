@@ -19,7 +19,7 @@ const Hero = forwardRef(({ nextRef }, ref) => {
   return (
     <div
       id="Hero"
-      className="h-[100vh] pt-[120px] mb-[500px] flex flex-col items-center justify-center gap-2 snap-center max-sm:py-[50px]"
+      className=" pt-[120px]  flex flex-col items-center justify-center gap-2 mb-[250px]  max-sm:pt-[100px] lg:snap-center"
       ref={ref}
     >
       {/* Three JS */}

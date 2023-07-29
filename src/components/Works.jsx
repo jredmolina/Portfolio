@@ -149,11 +149,11 @@ const Works = forwardRef((props, ref) => {
   return (
     <div
       id="Works"
-      className="h-[100vh] snap-start flex flex-col items-center justify-between  max-lg:h-[100%] mb-[500px] max-lg:mb-[400px] max-sm:py-[50px]"
+      className=" flex flex-col items-center justify-between  max-lg:h-[100%] mb-[250px]   lg:snap-center"
       ref={ref}
     >
-      <div className="h-[100vh] snap-start w-[90%] flex  flex-col items-center justify-center gap-2 max-lg:w-[100%] max-lg:gap-3">
-        <h1 className="text-[50px] max-lg:text-[30px]">Projects</h1>
+      <div className="  w-[90%] flex  flex-col items-center justify-start gap-2 max-lg:w-[100%] max-lg:gap-3 lg:snap-center">
+        <h1 className="text-[40px] max-lg:text-[30px]">Works</h1>
         <img className="h-[5px]" src="./img/line.png"></img>
 
         {/* Grid */}
