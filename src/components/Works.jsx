@@ -149,7 +149,7 @@ const Works = forwardRef((props, ref) => {
   return (
     <div
       id="Works"
-      className=" flex flex-col items-center justify-between  max-lg:h-[100%] mb-[250px]   lg:snap-center"
+      className=" flex flex-col items-center justify-between mb-[250px]  max-lg:h-[100%] lg:mb-[400px]   lg:snap-center"
       ref={ref}
     >
       <div className="  w-[90%] flex  flex-col items-center justify-start gap-2 max-lg:w-[100%] max-lg:gap-3 lg:snap-center">
