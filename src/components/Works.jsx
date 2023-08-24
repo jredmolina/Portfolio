@@ -149,129 +149,86 @@ const Works = forwardRef((props, ref) => {
   return (
     <div
       id="Works"
-      className=" flex flex-col items-center justify-between mb-[250px]  max-lg:h-[100%] lg:mb-[400px]   lg:snap-center"
+      className=" flex flex-col items-center justify-between mb-[3000px] px-[50px] max-lg:h-[100%] lg:mb-[400px] lg:snap-start"
       ref={ref}
     >
-      <div className="  w-[90%] flex  flex-col items-center justify-start gap-2 max-lg:w-[100%] max-lg:gap-3 lg:snap-center">
+      <div className="w-[90%] flex  flex-col items-center justify-start gap-2 max-lg:w-[100%] max-lg:gap-3 lg:snap-center">
         <h1 className="text-[40px] max-lg:text-[30px]">Works</h1>
         <img className="h-[5px]" src="./img/line.png"></img>
-
-        {/* Grid */}
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          className="photo-grid"
-        >
-          {/* Split the Bill Tall Card */}
-          <motion.div
-            variants={item}
-            className="grid-div flex flex-col row-span-2 text-black items-center justify-center object-cover w-[100%] h-[auto] rounded-[10px] bg-white"
-            onClick={() =>
-              modalOpen.splitTheBill
-                ? close("splitTheBill")
-                : open("splitTheBill")
-            }
-          >
-            <h1 className=" text-[30px] m-2 font-semibold max-lg:text-[20px]">
-              Split the Bill
-            </h1>
-            <img className="h-[87%]" src={SplitTheBill}></img>
-          </motion.div>
-
-          {/* SyncSchedule */}
-          <motion.div
-            variants={item}
-            className="grid-div flex flex-col text-black items-center  object-cover justify-center w-[100%] h-[100%] rounded-[10px] bg-white"
-            onClick={() =>
-              modalOpen.syncSchedule
-                ? close("syncSchedule")
-                : open("syncSchedule")
-            }
-          >
-            <h1 className="h-[10%] text-[30px] m-2 font-semibold max-lg:text-[20px]">
-              SyncSchedule
-            </h1>
-            <img className="h-[90%] object-contain" src={SyncSchedule}></img>
-          </motion.div>
-
-          {/* PhotoGallery Tall Card */}
-          <motion.div
-            variants={item}
-            className="grid-div flex flex-col row-span-2 items-center text-black justify-center object-fill w-[100%] h-[100%] rounded-[10px] bg-white"
-            onClick={() =>
-              modalOpen.photoGallery
-                ? close("photoGallery")
-                : open("photoGallery")
-            }
-          >
-            <h1 className=" text-[30px] m-2 font-semibold max-lg:text-[20px]">
-              Photo Gallery
-            </h1>
-            <img className="h-[87%]" src={PhotoGallery}></img>
-          </motion.div>
-
-          {/* PolySec */}
-          <motion.div
-            variants={item}
-            className="grid-div flex flex-col items-center object-cover text-black justify-center w-[100%] h-[100%] rounded-[10px] bg-white"
-            onClick={() =>
-              modalOpen.polySec ? close("polySec") : open("polySec")
-            }
-          >
-            <h1 className=" h-[10%] text-[30px] m-2 font-semibold max-lg:text-[20px]">
-              PolySec
-            </h1>
-            <img className="h-[90%] object-contain" src={PolySec}></img>
-          </motion.div>
-        </motion.div>
       </div>
 
-      <AnimatePresence initial={false} wait={true} onExitComplete={() => null}>
-        {/* Render each modal */}
-        {Object.keys(modalOpen).map((key) => {
-          if (modalOpen[key]) {
-            // Render the corresponding component based on the key
-            switch (key) {
-              case "splitTheBill":
-                return (
-                  <Modal
-                    modalOpen={modalOpen.splitTheBill}
-                    handleClose={() => close("splitTheBill")}
-                    projectData={projects.splitTheBill}
-                  />
-                );
-              case "syncSchedule":
-                return (
-                  <Modal
-                    modalOpen={modalOpen.syncSchedule}
-                    handleClose={() => close("syncSchedule")}
-                    projectData={projects.syncSchedule}
-                  />
-                );
-              case "photoGallery":
-                return (
-                  <Modal
-                    modalOpen={modalOpen.photoGallery}
-                    handleClose={() => close("photoGallery")}
-                    projectData={projects.photoGallery}
-                  />
-                );
-              case "polySec":
-                return (
-                  <Modal
-                    modalOpen={modalOpen.polySec}
-                    handleClose={() => close("polySec")}
-                    projectData={projects.polySec}
-                  />
-                );
-              default:
-                return null;
-            }
-          }
-          return null;
-        })}
-      </AnimatePresence>
+      <div className="flex flex-wrap   justify-center items-center gap-[100px] py-[50px]">
+        {/* Sync Schedule */}
+        <div className="flex flex-col items-center gap-2 justify-center lg:snap-center lg:flex-row">
+          <img className="w-[450px] h-[300px]" src={SyncSchedule} alt=""></img>
+          <div className=" w-[400px] h-[375px] px-[30px] py-[15px] bg-black/50 rounded-md">
+            <h1 className="text-[25px] font-bold">Sync Schedule</h1>
+            <p className=" text-[17px] font-light">
+              React | Node.js | Twilio | AWS
+            </p>
+            <p className="mt-[10px] text-[17px]">
+              A calendar sharing social media site that allows users to maintain
+              their own personal calendars, create groups with other users and
+              create collective, shared calendars, and chat with other users.
+            </p>
+            <div className="flex gap-5 mt-[20px]">
+              <button className="rounded-md">Live Site</button>
+              <button className="rounded-md">GitHub</button>
+            </div>
+          </div>
+        </div>
+
+        {/* PolySec */}
+        <div className="flex flex-col items-center gap-2 justify-center  lg:snap-center lg:flex-row">
+          <img className="w-[450px] h-[300px]" src={PolySec} alt=""></img>
+          <div className=" w-[400px] h-[375px] px-[30px] py-[15px] bg-black/50 rounded-md ">
+            <h1 className="text-[25px] font-bold">PolySec</h1>
+            <p className=" text-[17px] font-light">
+              HTML | CSS | Figma | Canva
+            </p>
+            <p className="mt-[10px] text-[17px]">
+              Worked as an intern for the Cal Poly Pomona PolySec Cybersecurity
+              Research Lab which involved updating the research lab website and
+              working with the graduates students to showcase their projects.
+            </p>
+            <div className="flex gap-5 mt-[20px]">
+              <button className="rounded-md">Live Site</button>
+            </div>
+          </div>
+        </div>
+
+        {/* Split the Bill */}
+        <div className="flex  flex-col items-center gap-2 justify-center lg:snap-center lg:flex-row">
+          <img className="h-[500px]" src={SplitTheBill} alt=""></img>
+          <div className="w-[400px] h-[375px] px-[30px] py-[15px] bg-black/50 rounded-md">
+            <h1 className="text-[25px] font-bold">Split The Bill</h1>
+            <p className=" text-[17px] font-light">Kotlin</p>
+            <p className="mt-[10px] text-[17px]">
+              A mobile app that assists users in splitting restaurant bills that
+              are not so easily divided.
+            </p>
+            <div className="flex gap-5 mt-[20px]">
+              <button className="rounded-md">GitHub</button>
+            </div>
+          </div>
+        </div>
+
+        {/* Photo Gallery */}
+        <div className="flex flex-col gap-2 items-center justify-center lg:snap-center lg:flex-row">
+          <img className="h-[500px]" src={PhotoGallery} alt=""></img>
+          <div className=" w-[400px] h-[375px] px-[30px] py-[15px] bg-black/50 rounded-md">
+            <h1 className="text-[25px] font-bold">Photo Gallery</h1>
+            <p className=" text-[17px] font-light">Kotlin | Flickr API</p>
+            <p className="mt-[10px] text-[17px]">
+              An image gallery mobile app that uses Flickr API to allow users
+              view and search for images from Flickr.
+            </p>
+            <div className="flex gap-5 mt-[20px]">
+              <button className="rounded-md">GitHub</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 });
