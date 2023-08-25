@@ -152,14 +152,14 @@ const Works = forwardRef((props, ref) => {
       className=" flex flex-col items-center justify-between mb-[3000px] px-[50px] max-lg:h-[100%] lg:mb-[400px] lg:snap-start"
       ref={ref}
     >
-      <div className="w-[90%] flex  flex-col items-center justify-start gap-2 max-lg:w-[100%] max-lg:gap-3 lg:snap-center">
+      <div className="w-[90%] flex  flex-col items-center justify-start gap-2 pt-[150px] max-lg:w-[100%] max-lg:gap-3 ">
         <h1 className="text-[40px] max-lg:text-[30px]">Works</h1>
         <img className="h-[5px]" src="./img/line.png"></img>
       </div>
 
-      <div className="flex flex-wrap   justify-center items-center gap-[100px] py-[50px]">
+      <div className="flex flex-wrap   justify-center items-center gap-[75px] py-[50px] lg:snap-center">
         {/* Sync Schedule */}
-        <div className="flex flex-col items-center gap-2 justify-center lg:snap-center lg:flex-row">
+        <div className="flex flex-col items-center gap-2 justify-center  lg:flex-row">
           <img
             className="w-[450px] h-[300px] max-sm:w-[370px] max-sm:h-[250px]"
             src={SyncSchedule}
@@ -175,15 +175,19 @@ const Works = forwardRef((props, ref) => {
               their own personal calendars, create groups with other users and
               create collective, shared calendars, and chat with other users.
             </p>
-            <div className="flex gap-5 mt-[20px]">
-              <button className="rounded-md">Live Site</button>
-              <button className="rounded-md">GitHub</button>
+            <div className="flex gap-5 mt-[20px] justify-start">
+              <a href={projects.syncSchedule.live} target="_blank">
+                <button className="rounded-md w-[150px] ">Live Site</button>
+              </a>
+              <a href={projects.syncSchedule.github} target="_blank">
+                <button className="rounded-md w-[150px]">GitHub</button>
+              </a>
             </div>
           </div>
         </div>
 
         {/* PolySec */}
-        <div className="flex flex-col items-center gap-2 justify-center  lg:snap-center lg:flex-row">
+        <div className="flex flex-col items-center gap-2 justify-center  lg:snap-center  lg:flex-row">
           <img
             className="w-[450px] h-[300px] max-sm:w-[370px] max-sm:h-[250px]"
             src={PolySec}
@@ -199,14 +203,16 @@ const Works = forwardRef((props, ref) => {
               Research Lab which involved updating the research lab website and
               working with the graduates students to showcase their projects.
             </p>
-            <div className="flex gap-5 mt-[20px]">
-              <button className="rounded-md">Live Site</button>
+            <div className="flex gap-5 mt-[20px] ">
+              <a href={projects.polySec.live} target="_blank">
+                <button className="rounded-md  w-[150px]">Live Site</button>
+              </a>
             </div>
           </div>
         </div>
 
         {/* Split the Bill */}
-        <div className="flex  flex-col items-center gap-2 justify-center lg:snap-center lg:flex-row">
+        <div className="flex  flex-col items-center gap-2 justify-center  lg:flex-row  lg:snap-center">
           <img className="h-[500px] " src={SplitTheBill} alt=""></img>
           <div className="w-[400px] h-[375px] px-[30px] py-[15px] bg-black/50 rounded-md max-sm:w-[350px]">
             <h1 className="text-[25px] font-bold">Split The Bill</h1>
@@ -215,14 +221,16 @@ const Works = forwardRef((props, ref) => {
               A mobile app that assists users in splitting restaurant bills that
               are not so easily divided.
             </p>
-            <div className="flex gap-5 mt-[20px]">
-              <button className="rounded-md">GitHub</button>
+            <div className="flex gap-5 mt-[20px] ">
+              <a href={projects.splitTheBill.github} target="_blank">
+                <button className="rounded-md w-[150px]">GitHub</button>
+              </a>
             </div>
           </div>
         </div>
 
         {/* Photo Gallery */}
-        <div className="flex flex-col gap-2 items-center justify-center lg:snap-center lg:flex-row">
+        <div className="flex flex-col gap-2 items-center justify-center lg:flex-row  lg:snap-center">
           <img className="h-[500px]" src={PhotoGallery} alt=""></img>
           <div className=" w-[400px] h-[375px] px-[30px] py-[15px] bg-black/50 rounded-md max-sm:w-[350px]">
             <h1 className="text-[25px] font-bold">Photo Gallery</h1>
@@ -232,7 +240,9 @@ const Works = forwardRef((props, ref) => {
               view and search for images from Flickr.
             </p>
             <div className="flex gap-5 mt-[20px]">
-              <button className="rounded-md">GitHub</button>
+              <a href={projects.photoGallery.github} target="_blank">
+                <button className="rounded-md w-[150px]">GitHub</button>
+              </a>
             </div>
           </div>
         </div>
