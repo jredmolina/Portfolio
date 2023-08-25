@@ -160,8 +160,12 @@ const Works = forwardRef((props, ref) => {
       <div className="flex flex-wrap   justify-center items-center gap-[100px] py-[50px]">
         {/* Sync Schedule */}
         <div className="flex flex-col items-center gap-2 justify-center lg:snap-center lg:flex-row">
-          <img className="w-[450px] h-[300px]" src={SyncSchedule} alt=""></img>
-          <div className=" w-[400px] h-[375px] px-[30px] py-[15px] bg-black/50 rounded-md">
+          <img
+            className="w-[450px] h-[300px] max-sm:w-[370px] max-sm:h-[250px]"
+            src={SyncSchedule}
+            alt=""
+          ></img>
+          <div className=" w-[400px] h-[375px] px-[30px] py-[15px] bg-black/50 rounded-md max-sm:w-[350px]">
             <h1 className="text-[25px] font-bold">Sync Schedule</h1>
             <p className=" text-[17px] font-light">
               React | Node.js | Twilio | AWS
@@ -180,8 +184,12 @@ const Works = forwardRef((props, ref) => {
 
         {/* PolySec */}
         <div className="flex flex-col items-center gap-2 justify-center  lg:snap-center lg:flex-row">
-          <img className="w-[450px] h-[300px]" src={PolySec} alt=""></img>
-          <div className=" w-[400px] h-[375px] px-[30px] py-[15px] bg-black/50 rounded-md ">
+          <img
+            className="w-[450px] h-[300px] max-sm:w-[370px] max-sm:h-[250px]"
+            src={PolySec}
+            alt=""
+          ></img>
+          <div className=" w-[400px] h-[375px] px-[30px] py-[15px] bg-black/50 rounded-md max-sm:w-[350px] ">
             <h1 className="text-[25px] font-bold">PolySec</h1>
             <p className=" text-[17px] font-light">
               HTML | CSS | Figma | Canva
@@ -199,8 +207,8 @@ const Works = forwardRef((props, ref) => {
 
         {/* Split the Bill */}
         <div className="flex  flex-col items-center gap-2 justify-center lg:snap-center lg:flex-row">
-          <img className="h-[500px]" src={SplitTheBill} alt=""></img>
-          <div className="w-[400px] h-[375px] px-[30px] py-[15px] bg-black/50 rounded-md">
+          <img className="h-[500px] " src={SplitTheBill} alt=""></img>
+          <div className="w-[400px] h-[375px] px-[30px] py-[15px] bg-black/50 rounded-md max-sm:w-[350px]">
             <h1 className="text-[25px] font-bold">Split The Bill</h1>
             <p className=" text-[17px] font-light">Kotlin</p>
             <p className="mt-[10px] text-[17px]">
@@ -216,7 +224,7 @@ const Works = forwardRef((props, ref) => {
         {/* Photo Gallery */}
         <div className="flex flex-col gap-2 items-center justify-center lg:snap-center lg:flex-row">
           <img className="h-[500px]" src={PhotoGallery} alt=""></img>
-          <div className=" w-[400px] h-[375px] px-[30px] py-[15px] bg-black/50 rounded-md">
+          <div className=" w-[400px] h-[375px] px-[30px] py-[15px] bg-black/50 rounded-md max-sm:w-[350px]">
             <h1 className="text-[25px] font-bold">Photo Gallery</h1>
             <p className=" text-[17px] font-light">Kotlin | Flickr API</p>
             <p className="mt-[10px] text-[17px]">
