@@ -32,14 +32,14 @@ const Contact = forwardRef((props, ref) => {
       className="  flex flex-col items-center justify-between  mb-[150px] max-lg:p-10 max-lg:ml-[0px] max-sm:py-[50px] lg:snap-center "
       ref={ref}
     >
-      <div className="  w-[70%] flex justify-center gap-[10px] max-sm:flex-col max-lg:w-[100%] max-lg:gap-[30px] ">
+      <div className="  w-[70%] flex justify-center gap-[100px] max-sm:flex-col max-lg:w-[100%] max-lg:gap-[50px] ">
         {/* Left Side */}
         <motion.div
           whileInView={{ x: 0 }}
           initial={{ x: -300 }}
           className="flex flex-col items-start gap-[3px] justify-center max-lg:items-center "
         >
-          <h1 className="text-[50px]  max-lg:text-center max-lg:text-[30px] ">
+          <h1 className="text-[40px]  max-lg:text-center max-lg:text-[30px] ">
             Interested in working together? Send me a message!
           </h1>
           <div className="flex justify-center items-center gap-[15px]">
