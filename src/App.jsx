@@ -1,51 +1,52 @@
-import { useState, useRef, useEffect } from "react";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import "./index.css";
 import "./App.css";
-import Hero from "./components/Hero";
-import Who from "./components/Who";
-import Works from "./components/Works";
-import Contact from "./components/Contact";
-import styled from "styled-components";
 import Navbar from "./components/NavBar";
-import { useTypeWriter, Cursor } from "react-simple-typewriter";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+import Works from "./pages/Works";
 
-const Container = styled.div`
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  overflow-y: auto;
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  background: url("./img/GrainyBg.png");
-  background-size: cover;
-  background-position: center center;
-  z-index: -1;
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
-`;
+const Layout = () => {
+  return (
+    <div className="flex flex-col h-screen">
+      <Navbar />
+      <div className="flex-grow">
+        <Outlet />
+      </div>
+    </div>
+  );
+};
 
 function App() {
-  const heroRef = useRef(null);
-  const whoRef = useRef(null);
-  const worksRef = useRef(null);
-  const contactRef = useRef(null);
-
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/Contact/",
+          element: <Contact />,
+        },
+        {
+          path: "/About/",
+          element: <About />,
+        },
+        {
+          path: "/Works",
+          element: <Works />,
+        },
+      ],
+    },
+  ]);
   return (
-    <Container>
-      <Navbar
-        heroRef={heroRef}
-        whoRef={whoRef}
-        worksRef={worksRef}
-        contactRef={contactRef}
-      ></Navbar>
-      <Hero ref={heroRef} nextRef={whoRef} />
-      <Who ref={whoRef} />
-      <Works ref={worksRef} />
-      <Contact ref={contactRef} />
-    </Container>
+    <div className="div">
+      <RouterProvider router={router} />
+    </div>
   );
 }
 

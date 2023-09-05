@@ -3,11 +3,9 @@ import resume from "../assets/Resume2024.pdf";
 import close from "../assets/closeWhite.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const NavBar = ({ heroRef, whoRef, worksRef, contactRef }) => {
-  const scrollToComponent = ({ ref }) => {
-    ref.current.scrollIntoView({ behavior: "smooth" });
-  };
+const NavBar = () => {
   const [menu, setMenu] = useState(false);
 
   const closeMenu = () => {
@@ -34,7 +32,7 @@ const NavBar = ({ heroRef, whoRef, worksRef, contactRef }) => {
   };
   return (
     <div>
-      <div className="fixed mt-[10px] top-[0]  w-[100%]  px-5 flex justify-between items-center ">
+      <div className="py-[10px] px-[100px] w-[100%]  flex justify-between items-center max-sm:px-[20px] ">
         {/* Logo  */}
         <motion.img
           animate={{ x: 0 }}
@@ -45,47 +43,36 @@ const NavBar = ({ heroRef, whoRef, worksRef, contactRef }) => {
 
         {/* Nav Bar Links */}
         <motion.ul className="flex gap-10 text-[25px] max-lg:hidden">
-          <motion.li
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-            className="hover:text-[#98d2c6] cursor-pointer"
-            onClick={() => scrollToComponent({ ref: heroRef })}
-          >
-            Home
-          </motion.li>
-          <motion.li
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-            className="hover:text-[#98d2c6] cursor-pointer"
-            onClick={() => scrollToComponent({ ref: whoRef })}
-          >
-            About
-          </motion.li>
-          <motion.li
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-            className="hover:text-[#98d2c6] cursor-pointer"
-            onClick={() => scrollToComponent({ ref: worksRef })}
-          >
-            Works
-          </motion.li>
-          <motion.li
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-            className="hover:text-[#98d2c6] cursor-pointer"
-            onClick={() => scrollToComponent({ ref: contactRef })}
-          >
-            Contact
-          </motion.li>
-          <motion.li
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-            className="hover:text-[#98d2c6] cursor-pointer"
-          >
+          <li>
+            <Link className="hover:text-[#98d2c6] cursor-pointer" to="/">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link className="hover:text-[#98d2c6] cursor-pointer" to="/About">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link className="hover:text-[#98d2c6] cursor-pointer" to="/Works">
+              Works
+            </Link>
+          </li>
+          <li>
+            <Link
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              className="hover:text-[#98d2c6] cursor-pointer"
+              to="/Contact"
+            >
+              Contact
+            </Link>
+          </li>
+          <li className="hover:text-[#98d2c6] cursor-pointer">
             <a href={resume} download="Resume" target="_blank">
               Resume
             </a>
-          </motion.li>
+          </li>
         </motion.ul>
         {/* External Links */}
         <motion.ul
@@ -125,7 +112,7 @@ const NavBar = ({ heroRef, whoRef, worksRef, contactRef }) => {
       <AnimatePresence>
         {menu ? (
           <motion.div
-            className="absolute z-[10000] right-0 w-[200px] bg-[#629a8e] h-[100vh] p-5 flex flex-col items-end justify-start"
+            className="absolute z-[10000] top-0 right-0 bottom-0 w-[200px] bg-[#629a8e] h-[100vh] p-5 flex flex-col items-end justify-start"
             variants={slideIn}
             initial="hidden"
             animate="visible"
@@ -144,34 +131,44 @@ const NavBar = ({ heroRef, whoRef, worksRef, contactRef }) => {
                   closeMenu();
                 }}
               >
-                Home
+                <Link
+                  to="/"
+                  onClick={() => {
+                    closeMenu();
+                  }}
+                >
+                  Home
+                </Link>
               </li>
-              <li
-                className="cursor-pointer mb-2"
-                onClick={() => {
-                  scrollToComponent({ ref: whoRef });
-                  closeMenu();
-                }}
-              >
-                About
+              <li className="cursor-pointer mb-2">
+                <Link
+                  to="/About"
+                  onClick={() => {
+                    closeMenu();
+                  }}
+                >
+                  About
+                </Link>
               </li>
-              <li
-                className="cursor-pointer mb-2"
-                onClick={() => {
-                  scrollToComponent({ ref: worksRef });
-                  closeMenu();
-                }}
-              >
-                Works
+              <li className="cursor-pointer mb-2">
+                <Link
+                  to="/Works"
+                  onClick={() => {
+                    closeMenu();
+                  }}
+                >
+                  Works
+                </Link>
               </li>
-              <li
-                className="cursor-pointer mb-2"
-                onClick={() => {
-                  scrollToComponent({ ref: contactRef });
-                  closeMenu();
-                }}
-              >
-                Contact
+              <li className="cursor-pointer mb-2">
+                <Link
+                  to="/Contact"
+                  onClick={() => {
+                    closeMenu();
+                  }}
+                >
+                  Contact
+                </Link>
               </li>
               <li
                 className="cursor-pointer mb-2"

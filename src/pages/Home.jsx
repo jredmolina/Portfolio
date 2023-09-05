@@ -1,32 +1,27 @@
-import React, { forwardRef } from "react";
-import NavBar from "./NavBar";
-import { motion } from "framer-motion";
+import React from "react";
+import { motion, useScroll } from "framer-motion";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { HomeCircle } from "./HomeCircle";
+import { HomeCircle } from "../components/HomeCircle";
+import { Link } from "react-router-dom";
 
-const Hero = forwardRef(({ nextRef }, ref) => {
+const Hero = () => {
   const [text] = useTypewriter({
     words: ["Front-End Developer", "Software Engineer", "Web Developer"],
     loop: {},
   });
 
-  const scrollToNextComponent = (nextRef2) => {
-    nextRef.current.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <div
       id="Hero"
-      className=" pt-[120px]  flex flex-col items-center justify-center gap-2 mb-[250px]  max-sm:pt-[100px] lg:snap-center"
-      ref={ref}
+      className=" flex flex-col items-center justify-center gap-2   "
     >
       {/* Three JS */}
       <div className="w-[500px] h-[500px] ">
         <Canvas>
           <OrbitControls enableZoom={false} enableRotate={false} />
-          <ambientLight intensity={1} />
+          <ambientLight intensity={3} />
           <directionalLight position={[5, 2, 1]} />
           <HomeCircle></HomeCircle>
         </Canvas>
@@ -59,15 +54,16 @@ const Hero = forwardRef(({ nextRef }, ref) => {
           </p>
         </div>
 
-        <button
+        <motion.button
           className=" rounded-lg"
-          onClick={() => scrollToNextComponent({ nextRef2: nextRef })}
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
         >
-          Learn More
-        </button>
+          <Link to="/About">Learn More</Link>
+        </motion.button>
       </div>
     </div>
   );
-});
+};
 
 export default Hero;

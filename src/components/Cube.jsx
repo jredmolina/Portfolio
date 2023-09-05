@@ -15,7 +15,7 @@ export const Cube = () => {
   const cubeTexture = useLoader(TextureLoader, "./img/CubePhoto.png");
   return (
     <mesh>
-      <boxGeometry args={[1.75, 1.75, 1.75]} />
+      <boxGeometry args={[2.25, 2.25, 2.25]} />
       <meshStandardMaterial map={cubeTexture}></meshStandardMaterial>
     </mesh>
   );
