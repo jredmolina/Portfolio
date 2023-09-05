@@ -31,7 +31,7 @@ const Hero = () => {
       <div className="flex flex-col items-center gap-4">
         {/* Large Name Text */}
         <motion.h1
-          whileInView={{ scale: 1 }}
+          whileInView={{ scale: 1.5 }}
           initial={{ scale: 0 }}
           className="text-[60px] max-lg:text-[40px] leading-none list-none"
         >

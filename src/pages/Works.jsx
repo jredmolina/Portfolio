@@ -41,7 +41,11 @@ const projects = {
 const Works = () => {
   return (
     <div className=" flex lg:px-[100px] gap-[75px] max-md:flex-col max-md:px-[15px] ">
-      <div className="flex  flex-2 flex-col gap-[15px]">
+      <motion.div
+        whileInView={{ x: 0 }}
+        initial={{ x: -300 }}
+        className="flex  flex-2 flex-col gap-[15px]"
+      >
         <div className="flex  flex-col items-start justify-start gap-1 max-lg:w-[100%] max-lg:gap-3  ">
           <h1 className="text-[30px] max-lg:text-[30px]">Featured Projects</h1>
           <img className="h-[5px]" src="./img/line.png"></img>
@@ -101,10 +105,14 @@ const Works = () => {
             alt=""
           />
         </div>
-      </div>
+      </motion.div>
 
       {/* Other Projects */}
-      <div className="flex flex-1  flex-wrap flex-col gap-[20px] ">
+      <motion.div
+        whileInView={{ x: 0 }}
+        initial={{ x: 300 }}
+        className="flex flex-1  flex-wrap flex-col gap-[20px] "
+      >
         <div className="flex  flex-col items-start justify-start gap-1 max-lg:w-[100%] max-lg:gap-3 ">
           <h1 className="text-[30px] max-lg:text-[30px]">Other Projects</h1>
           <img className="h-[5px]" src="./img/line.png"></img>
@@ -147,7 +155,7 @@ const Works = () => {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
