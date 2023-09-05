@@ -40,7 +40,7 @@ const projects = {
 };
 const Works = () => {
   return (
-    <div className=" flex lg:px-[100px] gap-[75px] max-md:flex-col max-md:px-[15px] ">
+    <div className=" flex lg:px-[100px] gap-[75px] max-[1450px]:flex-col max-md:px-[15px] ">
       <motion.div
         whileInView={{ x: 0 }}
         initial={{ x: -300 }}
@@ -111,7 +111,7 @@ const Works = () => {
       <motion.div
         whileInView={{ x: 0 }}
         initial={{ x: 300 }}
-        className="flex flex-1  flex-wrap flex-col gap-[20px] min-w-[500px] "
+        className="flex flex-1  flex-wrap flex-col gap-[20px]  "
       >
         <div className="flex  flex-col items-start justify-start gap-1 max-lg:w-[100%] max-lg:gap-3 ">
           <h1 className="text-[30px] max-lg:text-[30px]">Other Projects</h1>
@@ -119,7 +119,7 @@ const Works = () => {
         </div>
 
         {/* Photo Gallery App */}
-        <div className="grid grid-cols-1 gap-[10px] xl:grid-cols-2">
+        <div className="grid grid-cols-1 gap-[10px] min-[1550px]:grid-cols-2">
           <div className="bg-black/70 rounded-md   p-[20px]">
             <h1 className="font-bold text-[20px]">
               {projects.photoGallery.name}
