@@ -20,7 +20,7 @@ body {
   background-color: #e4e1db;
   height: 100vh;
   overflow-x: hidden;
-  background: url(./img/GrainyBg.png);
+  background-image: url(./img/GrainyBg.png);
 }
 
 h1 {
