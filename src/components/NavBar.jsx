@@ -49,11 +49,6 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link className="hover:text-[#98d2c6] cursor-pointer" to="/About">
-              About
-            </Link>
-          </li>
-          <li>
             <Link className="hover:text-[#98d2c6] cursor-pointer" to="/Works">
               Works
             </Link>
@@ -138,16 +133,6 @@ const NavBar = () => {
                   }}
                 >
                   Home
-                </Link>
-              </li>
-              <li className="cursor-pointer mb-2">
-                <Link
-                  to="/About"
-                  onClick={() => {
-                    closeMenu();
-                  }}
-                >
-                  About
                 </Link>
               </li>
               <li className="cursor-pointer mb-2">

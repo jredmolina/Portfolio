@@ -15,10 +15,10 @@ const Hero = () => {
   return (
     <div
       id="Hero"
-      className=" flex flex-col items-center justify-center gap-2   "
+      className=" flex flex-col items-center justify-center gap-2 px-4 lg:py-20 "
     >
       {/* Three JS */}
-      <div className="w-[500px] h-[500px] ">
+      <div className="w-[400px] h-[400px] md:w-[600px] md:w-[600px] ">
         <Canvas>
           <OrbitControls enableZoom={false} enableRotate={false} />
           <ambientLight intensity={3} />
@@ -33,17 +33,17 @@ const Hero = () => {
         <motion.h1
           whileInView={{ scale: 1.5 }}
           initial={{ scale: 0 }}
-          className="text-[60px] max-lg:text-[40px] leading-none list-none"
+          className="text-4xl  leading-none list-none text-x"
         >
           Hi, I'm <strong>Jared</strong>
         </motion.h1>
-        <div className="flex items-center gap-[10px]">
-          <img className="h-[5px]" src="./img/line.png"></img>
+        <div className="flex items-center gap-2">
+          <img className="h-2" src="./img/line.png"></img>
         </div>
 
         {/* Typing Subtitle Text */}
         <div>
-          <p className="text-[30px] font-lighter max-lg:text-[20px]">
+          <p className="text-2xl font-lighter md:text-xl">
             <span className="drop-shadow-[0_10px_8px_rgba(0,0,0,0.2)]">
               I am a
             </span>

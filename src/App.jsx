@@ -2,7 +2,6 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import "./index.css";
 import "./App.css";
 import Navbar from "./components/NavBar";
-import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Works from "./pages/Works";
@@ -31,10 +30,6 @@ function App() {
         {
           path: "/Contact/",
           element: <Contact />,
-        },
-        {
-          path: "/About/",
-          element: <About />,
         },
         {
           path: "/Works",

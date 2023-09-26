@@ -40,7 +40,7 @@ const projects = {
 };
 const Works = () => {
   return (
-    <div className=" flex lg:px-[100px] gap-[75px] max-[1450px]:flex-col max-md:px-[15px] ">
+    <div className="flex lg:px-24 sm:px-12 gap-20 max-[1450px]:flex-col max-md:px-5 my-8  mb-32">
       <motion.div
         whileInView={{ x: 0 }}
         initial={{ x: -300 }}
@@ -59,7 +59,7 @@ const Works = () => {
             alt=""
           />
           {/* Project Content */}
-          <div className=" flex flex-col justify-center rounded-m w-[400px] lg:h-[375px] lg:py-[15px] lg:ml-[-70px] lg:text-right max-md:justify-start   ">
+          <div className=" flex flex-col justify-center rounded-m lg:w-[400px] lg:h-[375px] lg:py-[15px] lg:ml-[-70px] lg:text-right max-md:justify-start   ">
             <h1 className="text-[22px] font-bold">
               {projects.syncSchedule.name}
             </h1>
@@ -84,7 +84,7 @@ const Works = () => {
         {/* E-Commerce Store */}
         <div className="flex flex-col items-center justify-center  lg:flex-row ">
           {/* Project Content */}
-          <div className="flex flex-col justify-center rounded-m w-[400px] z-[5] lg:h-[375px] lg:py-[15px] lg:mr-[-70px] lg:text-left max-md:justify-start ">
+          <div className="flex flex-col justify-center rounded-m lg:w-[400px] z-[5] lg:h-[375px] lg:py-[15px] lg:mr-[-70px] lg:text-left max-md:justify-start ">
             <h1 className="text-[22px] font-bold">{projects.store.name}</h1>
             <p className=" text-[17px] font-light">
               React | Redux | Strapi | Sass

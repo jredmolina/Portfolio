@@ -29,9 +29,9 @@ const Contact = () => {
   return (
     <div
       id="Contact"
-      className=" flex flex-col items-center justify-center h-full max-lg:p-10 max-lg:ml-[0px] max-sm:py-[50px] lg:snap-center "
+      className=" flex flex-col items-center justify-start h-full px-10    my-8 lg:my-20 "
     >
-      <div className="  w-[70%] flex justify-center gap-[100px] max-sm:flex-col max-lg:w-[100%] max-lg:gap-[50px] ">
+      <div className="flex justify-center  w-3/4 gap-24 max-sm:flex-col max-lg:w-[100%] max-lg:gap-[50px] ">
         {/* Left Side */}
         <motion.div
           whileInView={{ x: 0 }}
