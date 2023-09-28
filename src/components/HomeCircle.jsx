@@ -14,7 +14,7 @@ import { TextureLoader } from "three";
 
 export const HomeCircle = () => {
   const { gl } = useThree();
-  gl.physicallyCorrectLights = true;
+  gl.useLegacyLights = true;
   const circleTexture = useLoader(TextureLoader, "./img/HomeTransparent.png");
   return (
     <group position={[0, 0, -12]}>

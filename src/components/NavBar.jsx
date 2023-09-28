@@ -54,12 +54,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-              className="hover:text-[#98d2c6] cursor-pointer"
-              to="/Contact"
-            >
+            <Link className="hover:text-[#98d2c6] cursor-pointer" to="/Contact">
               Contact
             </Link>
           </li>

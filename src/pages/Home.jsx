@@ -15,13 +15,13 @@ const Hero = () => {
   return (
     <div
       id="Hero"
-      className=" flex flex-col items-center justify-center gap-2 px-4 lg:py-20 "
+      className=" flex flex-col items-center justify-center gap-2 px-4 lg:py-1  "
     >
       {/* Three JS */}
-      <div className="w-[400px] h-[400px] md:w-[600px] md:w-[600px] ">
+      <div className="w-[400px] h-[400px]  md:w-[600px] ">
         <Canvas>
           <OrbitControls enableZoom={false} enableRotate={false} />
-          <ambientLight intensity={3} />
+          <ambientLight intensity={1} />
           <directionalLight position={[5, 2, 1]} />
           <HomeCircle></HomeCircle>
         </Canvas>

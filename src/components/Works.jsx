@@ -157,7 +157,7 @@ const Works = forwardRef((props, ref) => {
         <img className="h-[5px]" src="./img/line.png"></img>
       </div>
 
-      <div className="flex flex-wrap   justify-center items-center gap-[75px] py-[50px] lg:snap-center">
+      <div className="flex flex-col justify-center items-center gap-[75px] py-[50px] lg:snap-center">
         {/* Sync Schedule */}
         <div className="flex flex-col items-center gap-2 justify-center  lg:flex-row">
           <img
