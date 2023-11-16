@@ -75,7 +75,7 @@ const Works = () => {
             alt=""
           />
           {/* Project Content */}
-          <div className=" flex flex-col justify-center items-center w-[100%] mx-5 rounded-m lg:w-[400px] lg:h-[575px] lg:py-[15px] lg:ml-[-70px] lg:text-right max-md:justify-start   ">
+          <div className=" flex flex-col justify-center items-center w-[100%] mx-5 rounded-m lg:w-[400px] lg:h-[575px] lg:py-[15px] lg:ml-[-70px] lg:text-right max-md:justify-start lg:items-end   ">
             <h1 className="text-2xl md:text-3xl font-bold">
               {projects.syncSchedule.name}
             </h1>
@@ -104,7 +104,7 @@ const Works = () => {
         {/* E-Commerce Store */}
         <div className="flex flex-col-reverse items-center  gap-5 justify-center  lg:flex-row lg:min-w-[1050px]">
           {/* Project Content */}
-          <div className="flex flex-col justify-center items-center rounded-m lg:w-[400px] z-[5] lg:h-[575px] lg:py-[15px] lg:mr-[-50px] lg:text-left max-md:justify-start ">
+          <div className="flex flex-col justify-center items-center rounded-m lg:w-[400px] z-[5] lg:h-[575px] lg:py-[15px] lg:mr-[-50px] lg:text-left lg:items-start max-md:justify-start ">
             <h1 className="text-2xl md:text-3xl font-bold">
               {projects.store.name}
             </h1>
@@ -224,15 +224,14 @@ const Works = () => {
             </div>
 
             <div className="flex items-center justify-start gap-2 mt-3 ">
-              <a href={projects.sneakersWebsite.github} target="_blank">
-                <button className="rounded-md w-[125px] h-[40px]">
-                  GitHub
-                </button>
-              </a>
-
               <a href={projects.sneakersWebsite.live} target="_blank">
                 <button className="rounded-md w-[125px] h-[40px]">
                   Live Site
+                </button>
+              </a>
+              <a href={projects.sneakersWebsite.github} target="_blank">
+                <button className="rounded-md w-[125px] h-[40px]">
+                  GitHub
                 </button>
               </a>
             </div>
