@@ -34,12 +34,14 @@ const NavBar = () => {
     <div>
       <div className="py-[10px] px-[100px] w-[100%]  flex justify-between items-center max-sm:px-[20px] ">
         {/* Logo  */}
-        <motion.img
-          animate={{ x: 0 }}
-          initial={{ x: -300 }}
-          className="h-[160px] max-lg:h-[110px]"
-          src="./img/Signature.png"
-        />
+        <Link className="hover:text-[#98d2c6] cursor-pointer" to="/">
+          <motion.img
+            animate={{ x: 0 }}
+            initial={{ x: -300 }}
+            className="h-[160px] max-lg:h-[110px]"
+            src="./img/Signature.png"
+          />
+        </Link>
 
         {/* Nav Bar Links */}
         <motion.ul className="flex gap-10 text-[25px] max-lg:hidden">
