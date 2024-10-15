@@ -1,5 +1,5 @@
 import React, { forwardRef, useState } from "react";
-import email from "../assets/@.png";
+import email from "../assets/email.png";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { useRef } from "react";
