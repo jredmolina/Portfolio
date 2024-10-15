@@ -1,5 +1,5 @@
 import React from "react";
-import resume from "../assets/Resume2024.pdf";
+import resume from "../assets/Jared_Molina_Resume.pdf";
 import close from "../assets/closeWhite.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
