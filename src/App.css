@@ -20,7 +20,8 @@ body {
   background-color: #e4e1db;
   height: 100vh;
   overflow-x: hidden;
-  background: url(./assets/GrainyBg.png);
+  background: url(./assets/GrainyBg.png) no-repeat center center fixed;
+  background-size: cover;
 }
 
 h1 {

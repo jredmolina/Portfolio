@@ -1,5 +1,5 @@
 import React from "react";
-import resume2 from "../assets/Jared_Molina_Resume.pdf";
+import resume from "../assets/Jared_Molina_Resume.pdf";
 import close from "../assets/closeWhite.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
@@ -158,7 +158,7 @@ const NavBar = () => {
                   closeMenu();
                 }}
               >
-                <a href={resume2} download="Resume" target="_blank">
+                <a href={resume} download="Resume" target="_blank">
                   Resume
                 </a>
               </li>

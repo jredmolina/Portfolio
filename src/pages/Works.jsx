@@ -19,7 +19,7 @@ const projects = {
   hypeFactor: {
     name: "HypeFactorAI",
     image: HypeFactor,
-    desc: "Lead front-end developer and project manager for HypeFactorAI, a marketing platform that helps businesses and individuals create and manage their marketing brand identity, generating asseting through the use of AI",
+    desc: "Lead front-end developer and project manager for HypeFactorAI, a marketing platform that helps businesses and individuals create and manage their marketing brand identity, generating assets through the use of AI",
     github: "https://github.com/CS4800-Code-G/Calendar",
     live: "http://hypefactor.ai",
   },
